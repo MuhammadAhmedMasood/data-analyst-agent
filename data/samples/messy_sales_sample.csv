@@ -1,0 +1,102 @@
+order_id,order_date,customer_id,region,category,product,quantity,unit_price_gbp,sales_gbp,status
+ORD-0001,2025-11-24,CUST-016,East,Electronics,Wireless Mouse,1,19.99,19.99,Completed
+ORD-0002,2025-03-13,CUST-003,West,Electronics,Wireless Mouse,2,19.99,39.98,Completed
+ORD-0003,2025-02-17,CUST-013,North,Furniture,Desk,4,220.00,880.00,Pending
+ORD-0004,2025-08-03,CUST-001,East,Furniture,Desk,8,220.00,1760.00,Completed
+ORD-0005,2025-12-24,CUST-010,East,Electronics,Monitor,6,179.99,1079.94,Completed
+ORD-0006,2025-06-22,CUST-007,West,Electronics,Wireless Mouse,2,19.99,39.98,Completed
+ORD-0007,2025-06-26,CUST-035,West,Office Supplies,Notebook,1,4.50,4.50,Completed
+ORD-0008,2025-07-13,CUST-013,East,Electronics,Wireless Mouse,5,19.99,99.95,Completed
+ORD-0009,2025-01-24,CUST-015,North,Furniture,Desk,5,220.00,1100.00,Completed
+ORD-0010,2025-07-14,CUST-011,East,Office Supplies,Notebook,8,4.50,36.00,Completed
+ORD-0011,01/07/2025,CUST-011,North,Furniture,Desk,5,220.00,1100.00,Pending
+ORD-0012,2025-05-06,CUST-018,West,Furniture,Office Chair,8,149.50,1196.00,Pending
+ORD-0013,2025-04-23,,South,Office Supplies,Printer Paper,1,8.99,8.99,Completed
+ORD-0014,2025-06-11,CUST-014,North,Electronics,Monitor,5,179.99,899.95,Pending
+ORD-0015,2025-06-11,CUST-030,West,Furniture,Desk,unknown,220.00,1760.00,Completed
+ORD-0016,2025-05-16,CUST-028,East,Furniture,Office Chair,4,149.50,598.00,Pending
+ORD-0017,"Jul 24, 2025",CUST-033,South,Office Supplies,Printer Paper,4,8.99,35.96,Returned
+ORD-0018,2025-02-16,CUST-011,South,Electronics,Laptop,2,699.99,1399.98,Returned
+ORD-0019,2025-11-02,CUST-030,west,Electronics,Wireless Mouse,7,19.99,139.93,Pending
+ORD-0020,2025-05-09,CUST-022,East,Electronics,Laptop,2,699.99,1399.98,Completed
+ORD-0021,2025-05-31,CUST-001,West,Electronics,Monitor,3,£179.99,539.97,Completed
+ORD-0022,14/09/2025,CUST-033,East,Furniture,Office Chair,2,149.50,299.00,Pending
+ORD-0023,2025-04-12,CUST-035, South ,Furniture,Office Chair,6,149.50,897.00,Pending
+ORD-0024,2025-01-01,CUST-008,North,Office Supplies,Printer Paper,8,8.99,71.92,Completed
+ORD-0025,2025-06-07,CUST-006,South,Furniture,Desk,1,220.00,"1,299.99",Completed
+ORD-0026,2025-09-06,CUST-031,South,Electronics,Wireless Mouse,3,19.99,59.97,Pending
+ORD-0027,2025-03-26,CUST-035,South,Office Supplies,Notebook,7,4.50,31.50,Completed
+ORD-0028,2025-06-09,CUST-034,West,Electronics,Monitor,6,179.99,1079.94,Returned
+ORD-0029,03/03/2025,CUST-022,North,Furniture,Desk,4,220.00,880.00,Completed
+ORD-0030,2025-10-29,CUST-005,North,Furniture,Desk,4,220.00,880.00,Completed
+ORD-0031,2025-02-30,CUST-005,East,Electronics,Wireless Mouse,1,19.99,19.99,Pending
+ORD-0032,2025-05-02,CUST-035,South,Office Supplies,Notebook,8,4.50,36.00,Completed
+ORD-0033,20/10/2025,CUST-027,West,Furniture,Desk Lamp,4,35.00,140.00,completed 
+ORD-0034,"Feb 18, 2025",CUST-028,East,Electronics,Wireless Mouse,7,19.99,139.93,Returned
+ORD-0035,2025-08-28,CUST-026,North,Electronics,Laptop,2,699.99,1399.98,Completed
+ORD-0036,2025-02-25,CUST-035,South,Furniture,Desk,4,220.00,880.00,Returned
+ORD-0037,2025-03-13,CUST-030,East,Electronics,Monitor,3,179.99,539.97,Completed
+ORD-0038,2025-02-08,CUST-035,north,Furniture,Desk Lamp,2,35.00,70.00,Completed
+ORD-0039,2025-02-17,CUST-032,West,Furniture,Desk,3,220.00,660.00,Returned
+ORD-0040,2025-04-20,CUST-025,South,Electronics,Monitor,1,179.99,179.99,Completed
+ORD-0041,2025-07-19,CUST-028,East,Office Supplies,Notebook,8,4.50,36.00,Pending
+ORD-0042,2025-12-05,CUST-019,South,Furniture,Desk Lamp,3,£35.00,105.00,Completed
+ORD-0043,2025-01-30,CUST-004,North,Electronics,Laptop,6,699.99,4199.94,Pending
+ORD-0044,02/09/2025,CUST-012,North,Furniture,Office Chair,1,149.50,149.50,Completed
+ORD-0045,2025-11-01,CUST-008,West,Electronics,Wireless Mouse,4,19.99,79.96,Pending
+ORD-0046,2025-05-07,CUST-034,N/A,Electronics,Laptop,2,699.99,1399.98,Completed
+ORD-0047,2025-05-14,CUST-017,South,Furniture,Desk,6,220.00,1320.00,Returned
+ORD-0048,2025-03-09,CUST-005,East,Office Supplies,Notebook,8,4.50,36.00,Completed
+ORD-0049,2025-08-23,CUST-033,South,Electronics,Wireless Mouse,2,19.99,39.98,Completed
+ORD-0050,2025-03-09,CUST-024,South,Office Supplies,Printer Paper,2,8.99,,Completed
+ORD-0051,"Mar 22, 2025",CUST-020,North,Furniture,Desk Lamp,5,35.00,175.00,Completed
+ORD-0052,2025-03-10,,North,Office Supplies,Notebook,2,4.50,9.00,Pending
+ORD-0053,2025-03-21,CUST-022,South,Office Supplies,Notebook,5,4.50,22.50,Completed
+ORD-0054,2025-12-18,CUST-004,East,Office Supplies,Notebook,8,4.50,36.00,Completed
+ORD-0055,21/11/2025,CUST-001,North,Electronics,Monitor,5,179.99,899.95,Completed
+ORD-0056,2025-03-08,CUST-028,West,Office Supplies,Notebook,3,4.50,13.50,Pending
+ORD-0057,2025-01-05,CUST-035,south,Electronics,Wireless Mouse,,19.99,39.98,Completed
+ORD-0058,07/09/2025,CUST-003,South,Furniture,Office Chair,7,149.50,1046.50,Completed
+ORD-0059,2025-07-06,CUST-016,South,Electronics,Laptop,6,699.99,4199.94,Completed
+ORD-0060,2025-07-01,CUST-011,South,Electronics,Monitor,3,179.99,539.97,Completed
+ORD-0061,2025-07-31,CUST-027,East,Electronics,Laptop,3,699.99,2099.97,Completed
+ORD-0062,not recorded,CUST-003,West,Furniture,Office Chair,2,149.50,299.00,Returned
+ORD-0063,2025-04-24,CUST-020,East,Furniture,Desk,8,220.00,1760.00,Completed
+ORD-0064,2025-04-25,CUST-022,West,Electronics,Laptop,4,,2799.96,Completed
+ORD-0065,2025-02-05,CUST-035,West,Office Supplies,Notebook,6,4.50,27.00,Completed
+ORD-0066,15/01/2025,CUST-017,South,Electronics,Wireless Mouse,5,19.99,99.95,Completed
+ORD-0067,2025-02-25,CUST-028,East,Electronics,Monitor,6,179.99,1079.94,Pending
+ORD-0068,"Sep 19, 2025",CUST-017,South,Electronics,Wireless Mouse,7,19.99,139.93,Completed
+ORD-0069,2025-12-29,CUST-024, South ,Electronics,Monitor,1,179.99,179.99,Returned
+ORD-0070,2025-02-05,CUST-020,North,Office Supplies,Printer Paper,6,8.99,53.94,Pending
+ORD-0071,2025-06-08,CUST-019,West,Electronics,Monitor,6,179.99,1079.94,Pending
+ORD-0072,2025-03-07,CUST-012,West,Furniture,Desk,7,220.00,1540.00,Pending
+ORD-0073,2025-10-19,CUST-020,,Office Supplies,Notebook,7,4.50,31.50,Completed
+ORD-0074,2025-04-18,CUST-029,West,Electronics,Monitor,6,179.99,1079.94,Returned
+ORD-0075,2025-12-12,CUST-006,South,Furniture,Desk,8,220.00,-89.99,Completed
+ORD-0076,2025-09-21,CUST-020,south,Office Supplies,Printer Paper,2,8.99,17.98,Completed
+ORD-0077,12/04/2025,CUST-016,North,Furniture,Office Chair,1,149.50,149.50,COMPLETE
+ORD-0078,2025-11-09,CUST-013,West,Electronics,Wireless Mouse,8,19.99,159.92,Returned
+ORD-0079,2025-09-11,CUST-001,South,Electronics,Monitor,4,179.99,719.96,Completed
+ORD-0080,2025-08-06,CUST-004,West,Furniture,Desk,3,220.00,660.00,Pending
+ORD-0081,2025-05-08,CUST-030,South,Electronics,Wireless Mouse,8,19.99,159.92,Pending
+ORD-0020,2025-05-09,CUST-022,East,Electronics,Laptop,2,699.99,1399.98,Completed
+ORD-0082,2025-10-14,CUST-029,West,Office Supplies,Printer Paper,8,8.99,71.92,Completed
+ORD-0083,,CUST-018,South,Furniture,Desk Lamp,5,35.00,175.00,Pending
+ORD-0084,2025-09-06,CUST-005,West,Furniture,Desk,5,220.00,1100.00,Completed
+ORD-0085,"May 01, 2025",CUST-035,East,Office Supplies,Notebook,6,4.50,27.00,Completed
+ORD-0086,2025-03-12,CUST-010,West,Furniture,Office Chair,4,149.50,598.00,Completed
+ORD-0087,02/02/2025,CUST-035,East,Electronics,Monitor,7,179.99,1259.93,Returned
+ORD-0088,01/08/2025,CUST-025,West,Electronics,Laptop,4,699.99,2799.96,Pending
+ORD-0089,2025-12-23,CUST-001,West,Electronics,Laptop,7,699.99,4899.93,Completed
+ORD-0090,2025-06-02,CUST-032,South,Electronics,Monitor,7,179.99,1259.93,Completed
+ORD-0091,2025-05-20,,North,Electronics,Monitor,8,179.99,1439.92,Returned
+ORD-0092,2025-06-22,CUST-009, West ,Electronics,Monitor,3,179.99,539.97,Pending
+ORD-0093,2025-10-01,CUST-006,North,Electronics,Laptop,7,699.99,4899.93,Returned
+ORD-0094,2025-03-11,CUST-017,North,Furniture,Desk Lamp,3,35.00,105.00,Returned
+ORD-0095,2025-06-17,CUST-022,east,Furniture,Desk,8,220.00,1760.00,Returned
+ORD-0096,2025-05-23,CUST-031,North,Electronics,Monitor,5,179.99,899.95,Completed
+ORD-0097,2025-10-04,CUST-005,South,Electronics,Laptop,6,699.99,4199.94,Completed
+ORD-0098,2025-01-16,CUST-010,North,Furniture,Desk,4,220.00,880.00,Completed
+ORD-0099,06/03/2025,CUST-030,South,Furniture,Desk Lamp,2,35.00,70.00,Completed
+ORD-0100,2025-07-08,CUST-020,South,Furniture,Office Chair,2,149.50,299.00,Completed
