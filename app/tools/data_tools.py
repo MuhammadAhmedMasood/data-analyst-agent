@@ -3,6 +3,7 @@ import duckdb
 from langchain_core.tools import tool
 
 from app.data.store import DataStore
+from app.sandbox.runner import run_code
 
 MAX_ROWS = 50
 
@@ -56,5 +57,14 @@ def make_data_tools(store: DataStore) -> list:
         if truncated:
             text += f"\n(showing first {MAX_ROWS} rows only; aggregate to see everything)"
         return text
+        
+    @tool
+    def run_python(code: str) -> str:
+        """Run Python for analysis that is awkward in SQL (statistics, cleaning,
+        correlations, reshaping). pandas is imported as pd and numpy as np.
+        Every table is preloaded as a pandas DataFrame with the same name as
+        the table, e.g. superstore. Only printed output is returned, so use
+        print(). Each call starts fresh: variables do not carry over."""
+        return run_code(code, store.data_dir)
 
-    return [get_schema, run_sql]
+    return [get_schema, run_sql, run_python]

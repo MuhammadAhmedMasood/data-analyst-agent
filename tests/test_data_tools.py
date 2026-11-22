@@ -4,11 +4,13 @@ from app.data.store import DataStore
 from app.tools.data_tools import make_data_tools
 
 
+
+
 @pytest.fixture
 def tools():
     store = DataStore()
     store.load_csv("data/samples/Superstore.csv")
-    get_schema, run_sql = make_data_tools(store)
+    get_schema, run_sql, _ = make_data_tools(store)
     return get_schema, run_sql
 
 

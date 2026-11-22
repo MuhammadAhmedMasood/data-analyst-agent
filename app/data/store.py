@@ -1,6 +1,7 @@
 """Data layer: load CSVs into DuckDB and describe them for the LLM."""
 import re
 import sys
+import tempfile
 from pathlib import Path
 
 import duckdb
@@ -29,8 +30,13 @@ class DataStore:
     """One in-memory DuckDB database holding the user's tables."""
 
     def __init__(self) -> None:
-        self.con = duckdb.connect(":memory:")
-        self.tables: list[str] = []
+            self.con = duckdb.connect(":memory:")
+            self.tables: list[str] = []
+            self.workdir = Path(tempfile.mkdtemp(prefix="analyst_"))
+            self.data_dir = self.workdir / "data"
+            self.chart_dir = self.workdir / "charts"
+            self.data_dir.mkdir()
+            self.chart_dir.mkdir()
 
     def load_csv(self, path: str | Path) -> str:
         path = Path(path)
@@ -38,6 +44,8 @@ class DataStore:
         self.con.execute(f'DROP TABLE IF EXISTS "{name}"')
         utf8_path = ensure_utf8(path)
         self.con.read_csv(str(utf8_path)).create(name)
+        parquet_path = self.data_dir / f"{name}.parquet"
+        self.con.execute(f"COPY \"{name}\" TO '{parquet_path}' (FORMAT parquet)")
         if name not in self.tables:
             self.tables.append(name)
         return name
