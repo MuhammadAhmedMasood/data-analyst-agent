@@ -53,7 +53,10 @@ def make_data_tools(store: DataStore) -> list:
             return f"Error: {e}"
 
         truncated = len(df) > MAX_ROWS
-        text = df.head(MAX_ROWS).to_string(index=False)
+        shown = df.head(MAX_ROWS).copy()
+        text_cols = shown.select_dtypes(exclude="number").columns
+        shown[text_cols] = shown[text_cols].fillna("NULL")
+        text = shown.to_string(index=False, na_rep="NULL")
         if truncated:
             text += f"\n(showing first {MAX_ROWS} rows only; aggregate to see everything)"
         return text

@@ -61,3 +61,8 @@ def test_run_sql_truncates(tools):
     _, run_sql = tools
     out = run_sql.invoke({"query": "SELECT * FROM superstore"})
     assert "showing first 50 rows" in out
+
+def test_run_sql_shows_nulls_as_null(tools):
+    _, run_sql = tools
+    out = run_sql.invoke({"query": "SELECT NULL AS region, 1 AS n"})
+    assert "NULL" in out and "NaN" not in out

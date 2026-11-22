@@ -51,20 +51,23 @@ In your final answer:
 
 CHECKER_PROMPT = """You review a data analyst's draft answer before the user
 sees it. Judge only from the evidence given; assume nothing else.
-Fail the draft (passed = false) if any of these is true:
+
+Put a problem in blocking_problems only if it is one of these:
 - a number in the draft does not appear in, or follow directly from, a tool result
-- a planned data check was skipped, or a problem it found (duplicates, missing
-  or impossible values) was ignored without being mentioned
-- missing values are presented as real values (e.g. 'NaN' as a category)
-- a placeholder such as 'N/A', 'n/a', 'unknown' or a blank appears as a
-  category instead of being treated as missing
-- rows were excluded from a result (by WHERE, dedup, filters) without the
-  draft saying how many and why
-- the draft describes a cleaning step differently from what the SQL or code
-  actually did (e.g. says a value was removed when the query converted it)
-- the draft does not actually answer the question
-Otherwise pass it. Do not fail a draft for style. Make each problem specific:
-what is wrong and what to do instead."""
+- a data problem that changes the result (duplicates, missing values,
+  impossible values such as negative sales) was not checked, or was ignored
+  without being mentioned
+- a placeholder such as 'N/A', 'unknown', NULL or blank is shown as a real
+  category without saying it means missing data
+- rows were excluded from the result without saying so
+- the draft says the data was cleaned differently from what the SQL or code
+  did, in a way that changes what the numbers mean
+- the draft does not answer the question
+
+Everything else (wording, level of detail, how explanations are phrased) goes
+in minor_notes. A correct, honest answer with imperfect wording must have no
+blocking problems. Make each blocking problem specific: what is wrong and
+what to do instead."""
 
 
 class Plan(BaseModel):
@@ -73,8 +76,13 @@ class Plan(BaseModel):
 
 
 class Review(BaseModel):
-    passed: bool = Field(description="True only if the draft is fully supported by the evidence")
-    problems: list[str] = Field(description="Specific problems to fix; empty if passed")
+    blocking_problems: list[str] = Field(
+        description="Problems that make a number wrong or unsupported, or would "
+        "mislead the user about the result. Empty if there are none."
+    )
+    minor_notes: list[str] = Field(
+        description="Wording or explanation improvements that do not change the result."
+    )
 
 
 class AgentState(TypedDict):
@@ -167,10 +175,10 @@ def build_graph(store: DataStore, llm: BaseChatModel, checkpointer=None):
             f"Draft answer:\n{current[-1].content}"
         )
         review = checker_llm.invoke([SystemMessage(CHECKER_PROMPT), HumanMessage(prompt)])
-        if review.passed:
+        if not review.blocking_problems:
             return {"passed": True}
 
-        problems = "\n".join(f"- {p}" for p in review.problems)
+        problems = "\n".join(f"- {p}" for p in review.blocking_problems)
         if state["attempts"] >= MAX_ATTEMPTS:
             note = AIMessage(f"Note: a final review still found problems:\n{problems}")
             return {"passed": False, "messages": [note]}
