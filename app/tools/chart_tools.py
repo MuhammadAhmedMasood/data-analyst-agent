@@ -6,6 +6,8 @@ import matplotlib
 
 matplotlib.use("Agg")  # draw to files, no window
 import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.ticker import FuncFormatter
 from langchain_core.tools import tool
 
 from app.data.store import DataStore
@@ -55,7 +57,9 @@ def make_chart_tools(store: DataStore) -> list:
         ax.set_title(title)
         ax.set_xlabel(x)
         ax.set_ylabel(y or "count")
-        fig.autofmt_xdate()
+        if pd.api.types.is_datetime64_any_dtype(df[x]):
+            fig.autofmt_xdate()
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:,.0f}"))
         fig.tight_layout()
 
         path = store.chart_dir / f"chart_{len(list(store.chart_dir.glob('*.png'))) + 1}.png"
