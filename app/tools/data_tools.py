@@ -41,7 +41,7 @@ def make_data_tools(store: DataStore) -> list:
     def run_sql(query: str) -> str:
         """Run one read-only DuckDB SELECT query and return the result as a table.
         Wrap column names containing spaces or symbols in double quotes,
-        e.g. SELECT "Order Date" FROM superstore. Results are capped at 50 rows,
+        e.g. SELECT "Order Date" FROM superstore. DuckDB has no INITCAP. Results are capped at 50 rows,
         so aggregate (GROUP BY, SUM, COUNT) rather than selecting raw rows."""
         query = query.strip().rstrip(";")
         error = validate_select(store.con, query)

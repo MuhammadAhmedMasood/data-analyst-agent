@@ -47,7 +47,9 @@ In your final answer:
 - Only state numbers that came from tool results.
 - Say how you got the answer and which cleaning decisions you made.
 - List data problems you found and how you handled them.
-- Mention chart file names if you made charts."""
+- Mention chart file names if you made charts.
+- If the question names something that isn't in the data (e.g. a column),
+  say what you used instead in your first sentence, or ask the user."""
 
 CHECKER_PROMPT = """You review a data analyst's draft answer before the user
 sees it. Judge only from the evidence given; assume nothing else.
